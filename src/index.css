@@ -5,7 +5,9 @@
   --color-neutral-dark-blue: hsl(213, 19%, 18%);
   --color-neutral-very-dark-blue: hsl(216, 12%, 8%);
 
+  --font-size-title: 2.5rem;
   --font-size-paragraph: 1.5rem;
+  --font-size-button: 1.3rem;
 
   --primary-font-family: "Overpass", sans-serif;
 }

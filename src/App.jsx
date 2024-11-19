@@ -1,8 +1,12 @@
 import './App.css'
-import { RatingCircle } from './RatingCircle'
+import { RatingCard } from './RatingCard'
 
 function App() {
-	return <RatingCircle />
+	return (
+		<div className="main-container">
+			<RatingCard />
+		</div>
+	)
 }
 
 export default App

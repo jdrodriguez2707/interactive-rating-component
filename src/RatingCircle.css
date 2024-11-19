@@ -8,7 +8,7 @@
 	cursor: pointer;
 	transition: background-color 0.3s, color 0.3s;
 
-	&:hover {
+	&:not(.is-selected):hover {
 		background-color: var(--color-primary);
 
 		.rating-circle__number {
@@ -22,4 +22,13 @@
 	font-weight: 700;
 	text-align: center;
 	color: var(--color-neutral-light-gray);
+}
+
+.is-selected {
+	background-color: var(--color-neutral-white);
+  pointer-events: none;
+
+	.rating-circle__number {
+		color: var(--color-neutral-very-dark-blue);
+	}
 }
