@@ -2,7 +2,9 @@ import { RatingCircle } from './RatingCircle.jsx'
 import iconStar from './assets/images/icon-star.svg'
 import './RatingCard.css'
 
-export function RatingCard() {
+export function RatingCard({ setSelectedRating, handleRatingSubmit }) {
+	const ratings = [1, 2, 3, 4, 5]
+
 	return (
 		<article className='rating-card'>
 			<div className='rating-card__image-container'>
@@ -18,13 +20,15 @@ export function RatingCard() {
 				appreciated to help us improve our offering!
 			</p>
 			<div className='rating-circle-container'>
-				<RatingCircle>1</RatingCircle>
-				<RatingCircle>2</RatingCircle>
-				<RatingCircle>3</RatingCircle>
-				<RatingCircle>4</RatingCircle>
-				<RatingCircle>5</RatingCircle>
+				{ratings.map(rating => (
+					<RatingCircle key={rating} onClick={() => setSelectedRating(rating)}>
+						{rating}
+					</RatingCircle>
+				))}
 			</div>
-			<button className='rating-card__submit-btn'>Submit</button>
+			<button className='rating-card__submit-btn' onClick={handleRatingSubmit}>
+				Submit
+			</button>
 		</article>
 	)
 }

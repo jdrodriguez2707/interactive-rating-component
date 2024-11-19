@@ -1,12 +1,13 @@
-import './RatingCircle.css'
 import PropTypes from 'prop-types'
 import { useState } from 'react'
+import './RatingCircle.css'
 
-export function RatingCircle({ children }) {
+export function RatingCircle({ children, onClick }) {
 	const [isSelected, setIsSelected] = useState(false)
 
 	const handleRatingCircleClick = () => {
 		setIsSelected(prevIsSelected => !prevIsSelected)
+		onClick()
 	}
 
 	const ratingCircleClassName = isSelected
@@ -21,5 +22,6 @@ export function RatingCircle({ children }) {
 }
 
 RatingCircle.propTypes = {
-	children: PropTypes.node.isRequired
+	children: PropTypes.node.isRequired,
+	onClick: PropTypes.func.isRequired
 }

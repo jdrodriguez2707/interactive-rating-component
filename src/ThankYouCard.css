@@ -12,6 +12,7 @@
 	);
 	height: 365px;
 	justify-content: center;
+	animation: fadeIn 0.5s ease-out;
 }
 
 .thank-you-card__illustration {
@@ -39,4 +40,13 @@
 	font-size: var(--font-size-paragraph);
 	color: var(--color-neutral-light-gray);
 	text-align: center;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

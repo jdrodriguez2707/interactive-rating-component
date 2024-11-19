@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import thankYouIllustration from './assets/images/illustration-thank-you.svg'
 import './ThankYouCard.css'
 
@@ -10,7 +11,9 @@ export function ThankYouCard({ selectedRating }) {
 				alt='Thank you illustration'
 			/>
 			<div className='thank-you-card__rating-container'>
-				<p className='thank-you-card__rating-text'>You selected 4 out of 5</p>
+				<p className='thank-you-card__rating-text'>
+					You selected <span>{selectedRating}</span> out of 5
+				</p>
 			</div>
 			<h1 className='thank-you-card__title'>Thank you!</h1>
 			<p className='thank-you-card__paragraph'>
@@ -19,4 +22,8 @@ export function ThankYouCard({ selectedRating }) {
 			</p>
 		</article>
 	)
+}
+
+ThankYouCard.propTypes = {
+	selectedRating: PropTypes.number.isRequired
 }
