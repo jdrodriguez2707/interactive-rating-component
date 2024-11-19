@@ -1,0 +1,25 @@
+.rating-circle {
+	display: grid;
+	place-content: center;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-color: var(--color-neutral-dark-blue);
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+
+	&:hover {
+		background-color: var(--color-primary);
+
+		.rating-circle__number {
+			color: var(--color-neutral-very-dark-blue);
+		}
+	}
+}
+
+.rating-circle__number {
+	font-size: var(--font-size-paragraph);
+	font-weight: 700;
+	text-align: center;
+	color: var(--color-neutral-light-gray);
+}
