@@ -2,9 +2,16 @@ import { RatingCircle } from './RatingCircle.jsx'
 import PropTypes from 'prop-types'
 import iconStar from './assets/images/icon-star.svg'
 import './RatingCard.css'
+import { useState } from 'react'
 
 export function RatingCard({ setSelectedRating, handleRatingSubmit }) {
+  const [selectedRating, setSelectedRatingState] = useState(null)
   const ratings = [1, 2, 3, 4, 5]
+
+  const handleRatingClick = rating => {
+    setSelectedRatingState(rating)
+    setSelectedRating(rating)
+  }
 
   return (
     <article className='rating-card'>
@@ -22,7 +29,12 @@ export function RatingCard({ setSelectedRating, handleRatingSubmit }) {
       </p>
       <div className='rating-circle-container'>
         {ratings.map(rating => (
-          <RatingCircle key={rating} onClick={() => setSelectedRating(rating)}>
+          <RatingCircle
+            key={rating}
+            id={`rating-${rating}`}
+            onClick={() => handleRatingClick(rating)}
+            isSelected={selectedRating === rating}
+          >
             {rating}
           </RatingCircle>
         ))}

@@ -32,3 +32,7 @@
     color: var(--color-neutral-very-dark-blue);
   }
 }
+
+.rating-circle__input {
+  display: none;
+}

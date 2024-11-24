@@ -1,7 +1,7 @@
-import './App.css'
 import { useState } from 'react'
 import { RatingCard } from './RatingCard'
 import { ThankYouCard } from './ThankYouCard'
+import './App.css'
 
 function App() {
   const [selectedRating, setSelectedRating] = useState(null)
