@@ -1,6 +1,16 @@
 .main-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
   padding: 16px;
   max-width: 375px;
+}
+
+.error-message {
+  position: absolute;
+  bottom: -14px;
+  font-size: var(--font-size-paragraph);
+  color: var(--color-primary);
 }
 
 @media (width >= 1024px) {
