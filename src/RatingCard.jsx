@@ -5,11 +5,13 @@ import './RatingCard.css'
 import { useState } from 'react'
 
 export function RatingCard({ setSelectedRating, handleRatingSubmit }) {
-  const [selectedRating, setSelectedRatingState] = useState(null)
   const ratings = [1, 2, 3, 4, 5]
 
+  // State to ensure that only one rating circle is selected at a time
+  const [selectedRating, setSelectedRatingCircle] = useState(null)
+
   const handleRatingClick = rating => {
-    setSelectedRatingState(rating)
+    setSelectedRatingCircle(rating)
     setSelectedRating(rating)
   }
 
@@ -31,7 +33,6 @@ export function RatingCard({ setSelectedRating, handleRatingSubmit }) {
         {ratings.map(rating => (
           <RatingCircle
             key={rating}
-            id={`rating-${rating}`}
             onClick={() => handleRatingClick(rating)}
             isSelected={selectedRating === rating}
           >
