@@ -1,14 +1,14 @@
-import { RatingCircle } from './RatingCircle.jsx'
+import { useState } from 'react'
 import PropTypes from 'prop-types'
+import RatingCircle from './RatingCircle.jsx'
 import iconStar from './assets/images/icon-star.svg'
 import './RatingCard.css'
-import { useState } from 'react'
 
-export function RatingCard({ setSelectedRating, handleRatingSubmit }) {
+const RatingCard = ({ setSelectedRating, handleRatingSubmit }) => {
   const ratings = [1, 2, 3, 4, 5]
 
   // State to ensure that only one rating circle is selected at a time
-  const [selectedRating, setSelectedRatingCircle] = useState(null)
+  const [selectedRatingCircle, setSelectedRatingCircle] = useState(null)
 
   const handleRatingClick = rating => {
     setSelectedRatingCircle(rating)
@@ -34,7 +34,7 @@ export function RatingCard({ setSelectedRating, handleRatingSubmit }) {
           <RatingCircle
             key={rating}
             onClick={() => handleRatingClick(rating)}
-            isSelected={selectedRating === rating}
+            isSelected={selectedRatingCircle === rating}
           >
             {rating}
           </RatingCircle>
@@ -51,3 +51,5 @@ RatingCard.propTypes = {
   setSelectedRating: PropTypes.func.isRequired,
   handleRatingSubmit: PropTypes.func.isRequired
 }
+
+export default RatingCard

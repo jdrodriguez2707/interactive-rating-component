@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import './RatingCircle.css'
 
-export function RatingCircle({ children, onClick, isSelected }) {
+const RatingCircle = ({ children, onClick, isSelected }) => {
   const handleRatingCircleClick = () => {
     onClick()
   }
@@ -22,3 +22,5 @@ RatingCircle.propTypes = {
   onClick: PropTypes.func.isRequired,
   isSelected: PropTypes.bool.isRequired
 }
+
+export default RatingCircle
