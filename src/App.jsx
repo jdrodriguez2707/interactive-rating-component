@@ -16,6 +16,12 @@ const App = () => {
     setIsSubmitted(true)
   }
 
+  if (error) {
+    setTimeout(() => {
+      setError('')
+    }, 5000)
+  }
+
   return (
     <div className='main-container'>
       {isSubmitted ? (
