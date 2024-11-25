@@ -10,7 +10,7 @@
     var(--color-neutral-dark-blue) 0%,
     hsla(215, 20%, 12%, 0.012) 150%
   );
-  height: 365px;
+  height: 373px;
   justify-content: center;
   animation: fadeIn 0.5s ease-out;
 }
