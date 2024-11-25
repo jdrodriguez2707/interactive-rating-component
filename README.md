@@ -34,7 +34,7 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://your-solution-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/interactive-rating-component-using-react-j0FK2P8cmw)
 - [Live Site URL](https://interactive-rating-component-eight-blond.vercel.app/)
 
 ## My process
@@ -93,4 +93,3 @@ Users should be able to:
 ## Acknowledgments
 
 I want to thank Frontend Mentor for providing me with this challenge. It helped me to improve my skills in React and web design. I also want to thank the content creator [Midudev](https://cursoreact.dev/) for his React course. It helped me to understand better the basic concepts of React. Finally, I would advise developers don't be afraid to ask AI for help when you are stuck. It's a great way to learn new things and improve your skills fastly. The most important thing is to understand the code and know how to apply it in your projects.
-

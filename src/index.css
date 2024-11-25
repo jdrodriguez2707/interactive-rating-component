@@ -16,5 +16,13 @@ body {
   display: grid;
   place-content: center;
   font-family: var(--primary-font-family);
+  height: 100dvh;
   background-color: var(--color-neutral-very-dark-blue);
+}
+
+#root {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  height: inherit;
 }
