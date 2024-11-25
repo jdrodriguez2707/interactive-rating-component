@@ -11,15 +11,12 @@ const App = () => {
   const handleRatingSubmit = () => {
     if (selectedRating === null) {
       setError('Please select a rating before submitting.')
+      setTimeout(() => {
+        setError('')
+      }, 5000)
       return
     }
     setIsSubmitted(true)
-  }
-
-  if (error) {
-    setTimeout(() => {
-      setError('')
-    }, 5000)
   }
 
   return (
