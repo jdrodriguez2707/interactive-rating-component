@@ -1,9 +1,9 @@
 .rating-card {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  padding: 28px 24px;
-  border-radius: 20px;
+  gap: 2.4rem;
+  padding: 2.8rem 2.4rem;
+  border-radius: 30px;
   background: linear-gradient(
     224deg,
     var(--color-neutral-dark-blue) 0%,
@@ -19,12 +19,12 @@
   background-color: var(--color-neutral-dark-blue);
   border-radius: 50%;
   width: 20px;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .rating-card__icon-star {
   position: absolute;
-  width: 18px;
+  width: 1.8rem;
 }
 
 .rating-card__title {
@@ -47,8 +47,8 @@
 .rating-card__submit-btn {
   background-color: var(--color-primary);
   border: none;
-  border-radius: 20px;
-  padding: 14px;
+  border-radius: 30px;
+  padding: 1.4rem;
   text-transform: uppercase;
   font-size: var(--font-size-button);
   font-weight: 700;

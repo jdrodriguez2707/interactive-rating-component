@@ -2,15 +2,15 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 24px;
-  padding: 28px 24px;
-  border-radius: 20px;
+  gap: 2.4rem;
+  padding: 2.8rem 2.4rem;
+  border-radius: 30px;
   background: linear-gradient(
     224deg,
     var(--color-neutral-dark-blue) 0%,
     hsla(215, 20%, 12%, 0.012) 150%
   );
-  height: 373px;
+  height: 37.3rem;
   justify-content: center;
   animation: fadeIn 0.5s ease-out;
 }
@@ -21,8 +21,8 @@
 
 .thank-you-card__rating-container {
   background-color: var(--color-neutral-dark-blue);
-  border-radius: 20px;
-  padding: 6px 14px;
+  border-radius: 30px;
+  padding: 0.6rem 1.4rem;
 }
 
 .thank-you-card__rating-text {
@@ -33,7 +33,7 @@
 .thank-you-card__title {
   font-size: var(--font-size-title);
   color: var(--color-neutral-white);
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 .thank-you-card__paragraph {
