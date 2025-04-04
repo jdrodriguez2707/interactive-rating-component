@@ -8,6 +8,8 @@ const ThankYouCard = ({ selectedRating }) => (
       className="thank-you-card__illustration"
       src={thankYouIllustration}
       alt="Thank you illustration"
+      width={162}
+      height={108}
     />
     <div className="thank-you-card__rating-container">
       <p className="thank-you-card__rating-text">
