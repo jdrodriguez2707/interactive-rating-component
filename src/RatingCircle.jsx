@@ -6,19 +6,19 @@ const RatingCircle = ({ children, onClick, isSelected }) => {
     onClick()
   }
 
-  const ratingCircleClassName = isSelected
-    ? 'rating-circle is-selected'
-    : 'rating-circle'
+  const handleKeyPress = event => {
+    if (event.key === 'Enter') {
+      handleRatingCircleClick()
+    }
+  }
+
+  const ratingCircleClassName = isSelected ? 'rating-circle is-selected' : 'rating-circle'
 
   return (
     <div
       className={ratingCircleClassName}
       onClick={handleRatingCircleClick}
-      onKeyDown={event => {
-        if (event.key === 'Enter') {
-          handleRatingCircleClick()
-        }
-      }}
+      onKeyDown={handleKeyPress}
       tabIndex={0}
     >
       <p className='rating-circle__number'>{children}</p>
